@@ -18,13 +18,13 @@ with open(dir_customers, newline='') as customers_file, open(dir_employees, newl
     with connection:
         with connection.cursor() as cur:
             for row in cus_reader:
-                cur.executemany("INSERT INTO customers VALUES (%s, %s, %s)", (row['customer_id'], row['company_name'], row['contact_name']))
+                cur.execute("INSERT INTO customers VALUES (%s, %s, %s)", (row['customer_id'], row['company_name'], row['contact_name']))
 
             for row in emp_reader:
-                cur.executemany("INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s)", (row['employee_id'], row['first_name'], row['last_name'], row['title'], row['birth_date'], row['notes']))
+                cur.execute("INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s)", (row['employee_id'], row['first_name'], row['last_name'], row['title'], row['birth_date'], row['notes']))
 
             for row in ord_reader:
-                cur.executemany("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)", (row['order_id'], row['customer_id'], row['employee_id'], row['order_date'], row['ship_city']))
+                cur.execute("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)", (row['order_id'], row['customer_id'], row['employee_id'], row['order_date'], row['ship_city']))
 
 
 # finally:
