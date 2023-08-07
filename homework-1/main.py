@@ -3,7 +3,7 @@ import psycopg2
 import csv
 import os
 
-connection = psycopg2.connect(host="localhost", database="north", user="postgres", password="TranQuillita10")
+connection = psycopg2.connect(host="localhost", database="north", user="postgres", password="password")
 
 dir_customers = os.path.join('north_data', 'customers_data.csv')
 dir_employees = os.path.join('north_data', 'employees_data.csv')
