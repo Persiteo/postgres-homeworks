@@ -27,6 +27,8 @@ HAVING SUM(freight) > 2750
 ORDER BY SUM(freight) DESC
 
 -- 6. страны, в которых зарегистрированы и заказчики (customers) и поставщики (suppliers) и работники (employees).
-
+SELECT DISTINCT country FROM customers;
+SELECT DISTINCT country FROM suppliers;
+SELECT DISTINCT country FROM employees
 
 -- 7. страны, в которых зарегистрированы и заказчики (customers) и поставщики (suppliers), но не зарегистрированы работники (employees).
