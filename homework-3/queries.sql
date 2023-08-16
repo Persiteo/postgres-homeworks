@@ -25,9 +25,12 @@ except
 select company_name from customers
 join orders using(customer_id);
 --or
-SELECT company_name
-FROM customers
-WHERE customer_id NOT IN (SELECT customer_id FROM orders);
+select company_name
+from customers
+where customer_id not in (select customer_id from orders);
 
 -- 4. уникальные названия продуктов, которых заказано ровно 10 единиц (количество заказанных единиц см в колонке quantity табл order_details)
 -- Этот запрос написать именно с использованием подзапроса.
+select product_name
+from products
+where product_id in (select product_id from order_details where quantity = 10)
