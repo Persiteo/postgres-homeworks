@@ -25,3 +25,4 @@ INSERT INTO student (first_name, last_name, birth_date, phone) values ('Imya', '
 ('Imya1', 'Familiya1', '2014-11-10', '999-99-98'), ('Imya2', 'Familiya2', '2015-10-09', '999-99-97')
 
 -- 7. Удалить все данные из таблицы со сбросом идентификатор в исходное состояние
+TRUNCATE TABLE student restart identity;
