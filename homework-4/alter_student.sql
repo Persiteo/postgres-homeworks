@@ -18,7 +18,7 @@ Alter table student DROP column middle_name;
 Alter table student RENAME birthday TO birth_date;
 
 -- 5. Изменить тип данных колонки phone на varchar(32)
-
+Alter table student ALTER column phone SET DATA TYPE varchar(32);
 
 -- 6. Вставить три любых записи с автогенерацией идентификатора
 
